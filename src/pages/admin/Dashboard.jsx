@@ -4,29 +4,70 @@ const AdminDashboard = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="p-8">
-      <h1 className="text-2xl font-bold mb-6">Admin Dashboard</h1>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <button onClick={() => navigate('/admin/employee-management')} className="btn">
-          👥 Employee Management
-        </button>
-        <button onClick={() => navigate('/admin/attendance-tracker')} className="btn">
-          📅 Attendance Tracker
-        </button>
-        <button onClick={() => navigate('/admin/leave-requests')} className="btn">
-          📝 Leave Requests
-        </button>
-        <button onClick={() => navigate('/admin/salary-bonus')} className="btn">
-          💰 Salary & Bonus
-        </button>
-        <button onClick={() => navigate('/admin/reports')} className="btn">
-          📊 Reports
-        </button>
-        <button onClick={() => navigate('/admin/apr')} className="btn">
-          📄 APR Page
-        </button>
+    <div className="p-0">
+      <div className="w-full bg-blue-100 p-6 flex justify-center shadow-md">
+        <h1 className="text-3xl font-bold">Admin Dashboard</h1>
       </div>
+
+      <div className="flex flex-wrap justify-center space-x-4 space-y-4 p-4">
+
+      <div
+        onClick={() => navigate('/admin/employee-management')}
+        className="w-80 h-64 bg-blue-100 p-4 rounded-[50px] flex justify-center items-center hover:bg-blue-200 transition-all duration-300 ease-in-out cursor-pointer mt-4"
+      >
+        <span className="text-lg font-semibold">
+          👥 Employee Management
+        </span>
+      </div>
+
+      <div
+        onClick={() => navigate('/admin/attendance-tracker')}
+        className="w-80 h-64 bg-blue-100 p-4 rounded-[50px] flex justify-center items-center hover:bg-blue-200 transition-all duration-300 ease-in-out cursor-pointer mt-4"
+      >
+        <span className="text-lg font-semibold">
+          📅 Attendance Tracker
+        </span>
+      </div>
+
+      <div
+        onClick={() => navigate('/admin/leave-requests')}
+        className="w-80 h-64 bg-blue-100 p-4 rounded-[50px] flex justify-center items-center hover:bg-blue-200 transition-all duration-300 ease-in-out cursor-pointer mt-4"
+      >
+        <span className="text-lg font-semibold">
+          📝 Leave Requests
+        </span>
+      </div>
+
+      <div
+        onClick={() => navigate('/admin/salary-bonus')}
+        className="w-80 h-64 bg-blue-100 p-4 rounded-[50px] flex justify-center items-center hover:bg-blue-200 transition-all duration-300 ease-in-out cursor-pointer mt-4"
+      >
+        <span className="text-lg font-semibold">
+          💰 Salary & Bonus
+        </span>
+      </div>
+
+      <div
+        onClick={() => navigate('/admin/reports')}
+        className="w-80 h-64 bg-blue-100 p-4 rounded-[50px] flex justify-center items-center hover:bg-blue-200 transition-all duration-300 ease-in-out cursor-pointer mt-4"
+      >
+        <span className="text-lg font-semibold">
+          📊 Reports
+        </span>
+      </div>
+
+      <div
+        onClick={() => navigate('/admin/apr')}
+        className="w-80 h-64 bg-blue-100 p-4 rounded-[50px] flex justify-center items-center hover:bg-blue-200 transition-all duration-300 ease-in-out cursor-pointer mt-4"
+      >
+        <span className="text-lg font-semibold">
+          📄 APR Page
+        </span>
+      </div>
+
+      </div>
+
+      
     </div>
   );
 };
