@@ -38,14 +38,7 @@ const AdminDashboard = () => {
         </span>
       </div>
 
-      <div
-        onClick={() => navigate('/admin/salary-bonus')}
-        className="w-80 h-64 bg-blue-100 p-4 rounded-[50px] flex justify-center items-center hover:bg-blue-200 transition-all duration-300 ease-in-out cursor-pointer mt-4"
-      >
-        <span className="text-lg font-semibold">
-          💰 Salary & Bonus
-        </span>
-      </div>
+      
 
       <div
         onClick={() => navigate('/admin/reports')}
