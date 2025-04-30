@@ -3,21 +3,30 @@ import { useNavigate } from 'react-router-dom';
 const ReportingDashboard = () => {
   const navigate = useNavigate();
 
-  return (
-    <div className="p-8">
-      <h1 className="text-2xl font-bold mb-6">Reporting Officer Dashboard</h1>
+  const cards = [
+    { label: 'Team Overview', path: '/reporting/team-overview', icon: '🗓️' },
+    { label: 'Communication', path: '/reporting/communication', icon: '👥' },
+  ];
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <button onClick={() => navigate('/reporting/subordinate-overview')} className="btn">
-          👥 Subordinate Overview
-        </button>
-        <button onClick={() => navigate('/reporting/team-attendance')} className="btn">
-          📅 Team Attendance
-        </button>
-        <button onClick={() => navigate('/reporting/feedback')} className="btn">
-          💬 Feedback / Comments
-        </button>
-        
+  return (
+    <div className="min-h-screen bg-white flex flex-col">
+      {/* Header Section */}
+      <div className="bg-blue-100 text-black py-4">
+        <h1 className="text-3xl font-bold text-center">Reporting Officer Dashboard</h1>
+      </div>
+      <div className="bg-blue-100 flex-grow flex items-center justify-center py-8">
+        <div className="grid grid-cols-2 gap-8 max-w-4xl">
+          {cards.map((card, index) => (
+            <div
+              key={index}
+              onClick={() => navigate(card.path)}
+              className="bg-blue-200 w-60 h-40 flex flex-col items-center justify-center rounded-2xl shadow-lg hover:bg-blue-300 cursor-pointer transition"
+            >
+              <div className="text-5xl mb-2">{card.icon}</div>
+              <div className="text-lg font-semibold">{card.label}</div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
