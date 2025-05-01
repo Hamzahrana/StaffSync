@@ -1,5 +1,5 @@
 {
-  "name": "staffsync_frontend",
+  "name": "staffsync_fronted",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,14 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "axios": "^1.8.4",
+    "axios": "^1.9.0",
     "react": "^19.0.0",
     "react-calendar": "^5.1.0",
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.56.1",
-    "react-router-dom": "^7.5.2",
-    "react-toastify": "^11.0.5",
-    "staffsync_frontend": "file:"
+    "react-router-dom": "^7.5.3",
+    "react-toastify": "^11.0.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.22.0",
@@ -32,10 +31,5 @@
     "postcss": "^8.5.3",
     "tailwindcss": "^3.4.1",
     "vite": "^6.3.1"
-  },
-  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
-  "main": "eslint.config.js",
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  }
 }

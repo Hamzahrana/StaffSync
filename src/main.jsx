@@ -1,15 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import AppRoutes from './routes.jsx'
+import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
-import { AuthProvider } from './context/AuthContext.jsx'
+import { AuthProvider } from './context/AuthContext.jsx' // or your path
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>         
-      <AuthProvider>        
-        <AppRoutes />
+    <BrowserRouter>         {/* ✅ must be outermost */}
+      <AuthProvider>        {/* ✅ now it has Router context */}
+        <App />
       </AuthProvider>
     </BrowserRouter>
   </React.StrictMode>,
